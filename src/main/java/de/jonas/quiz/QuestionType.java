@@ -4,9 +4,12 @@ import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
 
-public enum Questions {
+/**
+ * Die einzelnen Frage-Typen werden hier konfiguriert bzw instanziiert.
+ */
+public enum QuestionType {
 
-    /** Die erste {@link Questions Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
+    /** Die erste {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     ONE(
         "In welchem Jahr ist die Titanic am 15. April auf ihrer Jungfernfahrt von "
             + "Southampton im Atlantik gesunken?",
@@ -17,6 +20,7 @@ public enum Questions {
         2,
         1
     ),
+    /** Die zweite {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     TWO(
         "Wie lautet der Titel des ersten Carry-On-Films, der 1958 gedreht und veröffentlicht wurde?",
         "Trage Sergeant",
@@ -26,6 +30,7 @@ public enum Questions {
         1,
         2
     ),
+    /** Die dritte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     THREE(
         "Wie heißt das größte Technologieunternehmen in Südkorea?",
         "Posco",
@@ -35,6 +40,7 @@ public enum Questions {
         4,
         3
     ),
+    /** Die vierte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     FOUR(
         "Welcher Sänger stand der Popgruppe Showaddywaddy der 1970er Jahre gegenüber?",
         "Michael Jackson",
@@ -44,6 +50,7 @@ public enum Questions {
         2,
         4
     ),
+    /** Die fünfte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     FIVE(
         "Welcher mittlerweile berühmte Fernsehkoch begann im Alter von acht Jahren in der "
             + "Kneipe seiner Eltern, 'The Cricketers', in Clavering, Essex, mit dem Kochen?",
@@ -54,6 +61,9 @@ public enum Questions {
         3,
         5
     ),
+    /**
+     * Die sechste {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist.
+     */
     SIX(
         "Welcher niederländische Dartspieler hat am 2012. Januar die BDO-Weltmeisterschaft 15 im "
             + "Lakeside Country Club, Frimley Green, gewonnen?",
@@ -64,6 +74,7 @@ public enum Questions {
         2,
         6
     ),
+    /** Die siebte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     SEVEN(
         "Welches Metall wurde 1825 von Hans Christian Oersted entdeckt?",
         "Gold",
@@ -73,6 +84,7 @@ public enum Questions {
         3,
         7
     ),
+    /** Die achte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     EIGHT(
         "Was ist die Hauptstadt von Portugal?",
         "Sintra",
@@ -82,6 +94,7 @@ public enum Questions {
         2,
         8
     ),
+    /** Die neunte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     NINE(
         "Wie viele Atemzüge nimmt der menschliche Körper täglich ca?",
         "20.000",
@@ -91,6 +104,7 @@ public enum Questions {
         1,
         9
     ),
+    /** Die zehnte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     TEN(
         "Wer war von 1841 bis 1846 Premierminister von Großbritannien?",
         "Lord John Russell",
@@ -100,6 +114,7 @@ public enum Questions {
         4,
         10
     ),
+    /** Die elfte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
     ELEVEN(
         "Was ist das chemische Symbol für Silber?",
         "Fe",
@@ -109,6 +124,9 @@ public enum Questions {
         3,
         11
     ),
+    /**
+     * Die zwölfte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist.
+     */
     TWELFE(
         "Wer hat 1934 Cat's Eyes erfunden, um die Verkehrssicherheit zu verbessern?",
         "Hermann Anschütz-Kaempfe",
@@ -118,6 +136,10 @@ public enum Questions {
         2,
         12
     ),
+    /**
+     * Die dreizehnte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
+     * ist.
+     */
     THIRTEEN(
         "Was ist der kleinste Vogel der Welt?",
         "Adlerkolibri",
@@ -127,6 +149,10 @@ public enum Questions {
         4,
         13
     ),
+    /**
+     * Die vierzehnte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
+     * ist.
+     */
     FOURTEEN(
         "Wer hat 'Bodie' und 'Doyle' in The Professionals gespielt?",
         "Lewis Collins und Martin Shaw",
@@ -136,6 +162,10 @@ public enum Questions {
         1,
         14
     ),
+    /**
+     * Die fünfzehnte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
+     * ist.
+     */
     FIVETEEN(
         "Wofür hält Paul Hunn den Rekord, der bei 118.1 Dezibel lag?",
         "Der lauteste Schrei",
@@ -145,6 +175,10 @@ public enum Questions {
         3,
         15
     ),
+    /**
+     * Die sechzehnte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
+     * ist.
+     */
     SIXTEEN(
         "Was ist die Lebensdauer einer Libelle?",
         "7 Tage",
@@ -154,6 +188,10 @@ public enum Questions {
         2,
         16
     ),
+    /**
+     * Die siebzehnte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
+     * ist.
+     */
     SEVENTEEN(
         "In welchem Jahr wurde der erste Tonka-Truck hergestellt?",
         "1947",
@@ -164,6 +202,10 @@ public enum Questions {
         17
 
     ),
+    /**
+     * Die achtezhnte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
+     * ist.
+     */
     EIGHTEEN(
         "Wer hat 1810 die Blechdose zur Konservierung von Lebensmitteln erfunden?",
         "Al-Chwarizmi",
@@ -173,6 +215,10 @@ public enum Questions {
         4,
         18
     ),
+    /**
+     * Die neunzehnte {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
+     * ist.
+     */
     NINETEEN(
         "Wie viele Weihnachtsbäume werden in Deutschland pro Jahr ca verkauft?",
         "10 Mio",
@@ -182,6 +228,11 @@ public enum Questions {
         3,
         19
     ),
+    /**
+     * Die zwanzigste {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
+     * ist.
+     */
+    @SuppressWarnings("checkstyle:MultipleStringLiterals")
     TWENTY(
         "Welche 2 Serien sind die besten?",
         "Das A-Team und Der letzte Bulle",
@@ -192,10 +243,37 @@ public enum Questions {
         20
     );
 
+
+    //<editor-fold desc="CONSTANTS">
+    /** Die insgesamte Anzahl an Runden, die es in diesem Spiel gibt. */
+    private static final int OVERALL_ROUNDS = 20;
+    //</editor-fold>
+
+
+    //<editor-fold desc="LOCAL-FIELDS">
+    /**
+     * das individuelle {@link GUI Fenster} zu der {@link QuestionType Frage}. Also die fertige Frage in einem Fenster.
+     */
     @Getter
     private final GUI question;
+    //</editor-fold>
 
-    Questions(
+
+    //<editor-fold desc="CONSTRUCTORS">
+    /**
+     * Erstellt eine neue und vollständig unabhängige Instanz des {@link QuestionType Fragen-Typs}. Aus einer Frage,
+     * vier Antworten und die Angabe der richtigen Frage, wird ein {@link GUI Graphical-User-Interface} gebaut, womit
+     * der Nutzer dann interagieren kann und die entsprechende Frage wählen kann.
+     *
+     * @param question     Die Frage, die das {@link GUI} leitet.
+     * @param solutionA    Die erste mögliche Antwort.
+     * @param solutionB    Die zweite mögliche Antwort.
+     * @param solutionC    Die dritte mögliche Antwort.
+     * @param solutionD    Die vierte mögliche Antwort.
+     * @param correct      Die Angabe der richtigen Antwort.
+     * @param currentRound Die Nummer der aktuellen Runde.
+     */
+    QuestionType(
         @NotNull final String question,
         @NotNull final String solutionA,
         @NotNull final String solutionB,
@@ -212,8 +290,9 @@ public enum Questions {
             solutionD,
             correct,
             currentRound,
-            20
+            OVERALL_ROUNDS
         );
     }
+    //</editor-fold>
 
 }
