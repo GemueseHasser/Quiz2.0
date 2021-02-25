@@ -122,7 +122,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
-                                de.jonas.chat.Client
+                                de.jonas.Quiz
                             </mainClass>
                         </manifest>
                     </archive>
