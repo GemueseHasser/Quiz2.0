@@ -7,6 +7,7 @@ import org.jetbrains.annotations.Range;
 /**
  * Die einzelnen Frage-Typen werden hier konfiguriert bzw instanziiert.
  */
+@SuppressWarnings("checkstyle:MultipleStringLiterals")
 public enum QuestionType {
 
     /** Die erste {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist. */
@@ -65,7 +66,7 @@ public enum QuestionType {
      * Die sechste {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig ist.
      */
     SIX(
-        "Welcher niederländische Dartspieler hat am 2012. Januar die BDO-Weltmeisterschaft 15 im "
+        "Welcher niederländische Dartspieler hat am 15. Januar 2012 die BDO-Weltmeisterschaft im "
             + "Lakeside Country Club, Frimley Green, gewonnen?",
         "Jelle Klaasen",
         "Christian Kist",
@@ -232,7 +233,6 @@ public enum QuestionType {
      * Die zwanzigste {@link QuestionType Frage}, mit seinen vier vorgeschlagenen Antworten, von denen eine richtig
      * ist.
      */
-    @SuppressWarnings("checkstyle:MultipleStringLiterals")
     TWENTY(
         "Welche 2 Serien sind die besten?",
         "Das A-Team und Der letzte Bulle",
@@ -284,10 +284,10 @@ public enum QuestionType {
     ) {
         this.question = new GUI(
             "<html>" + question + "</html>",
-            solutionA,
-            solutionB,
-            solutionC,
-            solutionD,
+            "<html>" + solutionA + "</html>",
+            "<html>" + solutionB + "</html>",
+            "<html>" + solutionC + "</html>",
+            "<html>" + solutionD + "</html>",
             correct,
             currentRound,
             OVERALL_ROUNDS
