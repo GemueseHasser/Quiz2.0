@@ -2,8 +2,6 @@ package de.jonas;
 
 import de.jonas.quiz.QuestionType;
 
-import java.util.Arrays;
-
 /**
  * Die Haupt- und Main-Klasse der Quiz-Anwendung. Von hieraus wird das Spiel beim öffnen initialisiert und gestartet.
  * Außerdem wird in dieser Klasse je nachdem ob eine Antwort richtig war oder nicht, diese gehandhabt.
@@ -72,10 +70,10 @@ public class Quiz {
         System.out.println("----------------------------");
         for (int i = 0; i < ANSWERS.length; i++) {
             if (ANSWERS[i]) {
-                System.out.println(i + 1 + ".: Richtig!");
+                System.out.println(i + 1 + " ➜ Richtig!");
                 continue;
             }
-            System.out.println(i + 1 + ".: Falsch!");
+            System.out.println(i + 1 + " ➜ Falsch!");
         }
         System.exit(0);
     }

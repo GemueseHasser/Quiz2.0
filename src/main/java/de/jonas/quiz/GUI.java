@@ -130,7 +130,7 @@ public class GUI implements ActionListener {
      * und die seines erachtens richtige Antwort wählen kann.
      */
     private void openFrame() {
-        frame = new JFrame("Quiz -> Runde " + currentRound + " von " + overallRounds);
+        frame = new JFrame("Quiz ➜ Runde " + currentRound + " von " + overallRounds);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(0, 0, FRAME_WIDTH, FRAME_HEIGHT);
         frame.setLocationRelativeTo(null);
