@@ -68,9 +68,15 @@ public class Quiz {
      * Spiel dann ausgewertet und die grafische Übersicht der Fragen bzw dessen Riochtigkeit aufgerufen.
      */
     private void auswertung() {
-        System.out.println("finish!");
-        System.out.println("--------");
-        System.out.println(Arrays.toString(ANSWERS));
+        System.out.println("-------- Auswertung --------");
+        System.out.println("----------------------------");
+        for (int i = 0; i < ANSWERS.length; i++) {
+            if (ANSWERS[i]) {
+                System.out.println(i + 1 + ".: Richtig!");
+                continue;
+            }
+            System.out.println(i + 1 + ".: Falsch!");
+        }
         System.exit(0);
     }
 
